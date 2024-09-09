@@ -2,10 +2,10 @@
 
 A powerful, protocol-oriented library for working with the keychain in Swift.
 
-- [x] 📱 iOS 8.0+
-- [x] 💻 Mac OS X 10.10+
-- [x] ⌚️ watchOS 2
-- [x] 📺 tvOS
+- [x] 📱 iOS 15.0+
+- [x] 💻 Mac OS X 10.13+
+- [x] ⌚️ watchOS 8+
+- [x] 📺 tvOS 15.0+
 
 > &nbsp;
 >
@@ -17,10 +17,10 @@ A powerful, protocol-oriented library for working with the keychain in Swift.
 
 How is Locksmith different to other keychain wrappers?
 
-* Locksmith’s API is both super-simple and deeply powerful
-* Provides access to all of the keychain’s metadata with strongly typed results
-* Add functionality to your existing types for free
-* Useful enums and Swift-native types
+- Locksmith’s API is both super-simple and deeply powerful
+- Provides access to all of the keychain’s metadata with strongly typed results
+- Add functionality to your existing types for free
+- Useful enums and Swift-native types
 
 > Want to read more about Locksmith’s design? I wrote a blog post on [protocol oriented programming in Swift](http://matthewpalmer.net/blog/2015/08/30/protocol-oriented-programming-in-the-real-world/).
 
@@ -30,7 +30,7 @@ How is Locksmith different to other keychain wrappers?
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/matthewpalmer/Locksmith.svg?branch=master)](https://travis-ci.org/matthewpalmer/Locksmith)
 
-* Locksmith 4.0 and greater is Swift 4 compatible. See the `swift-3.1` branch for compatibility with older versions of Swift.
+- Locksmith 4.0 and greater is Swift 4 compatible. See the `swift-3.1` branch for compatibility with older versions of Swift.
 
 ### CocoaPods
 
@@ -47,6 +47,7 @@ Locksmith is available through [Carthage](https://github.com/Carthage/Carthage).
 ## Quick start
 
 ### **Setup**
+
 1. Choose your target project
 2. Select Capabilties
 3. Enable Keychain Sharing
@@ -223,7 +224,7 @@ var performDeleteRequestClosure: PerformRequestClosureType { get }
 
 ## Powerful support for the Cocoa Keychain
 
-Many wrappers around the keychain have only support certain parts of the API.  This is because there are so many options and variations on the way you can query the keychain that it’s almost impossible to abstract effectively.
+Many wrappers around the keychain have only support certain parts of the API. This is because there are so many options and variations on the way you can query the keychain that it’s almost impossible to abstract effectively.
 
 Locksmith tries to include as much of the keychain as possible, using protocols and protocol extensions to minimize the complexity. You can mix-and-match your generic passwords with your read requests while staying completely type-safe.
 
@@ -237,7 +238,7 @@ Generic passwords are probably the most common use-case of the keychain, and are
 
 Properties listed under ‘Required’ have to be implemented by any types that conform; those listed under ‘Optional’ can be implemented to add additional information to what is saved or read if desired.
 
-One thing to note: if you implement an optional property, its type annotation must match the type specified in the protocol *exactly*. If you implement `description: String?` it can’t be declared as `var description: String`.
+One thing to note: if you implement an optional property, its type annotation must match the type specified in the protocol _exactly_. If you implement `description: String?` it can’t be declared as `var description: String`.
 
 **Required**
 
@@ -288,7 +289,7 @@ var type: UInt? { get }
 
 ## Result types
 
-By adopting a protocol-oriented design from the ground up, Locksmith can provide access to the result of your keychain queries *with type annotations included*—store an `NSDate`, get an `NSDate` back with no type-casting!
+By adopting a protocol-oriented design from the ground up, Locksmith can provide access to the result of your keychain queries _with type annotations included_—store an `NSDate`, get an `NSDate` back with no type-casting!
 
 Let’s start with an example: the Twitter account from before, except it’s now an `InternetPasswordSecureStorable`, which lets us store a bit more metadata.
 
@@ -325,7 +326,7 @@ result?.data // Gives us a [String: AnyObject] of what was saved
 // and so on...
 ```
 
-This is *awesome*. No more typecasting.
+This is _awesome_. No more typecasting.
 
 #### `GenericPasswordSecureStorableResultType`
 

@@ -6,6 +6,7 @@
 =======
 # Xcode
 .DS_Store
+xcshareddata
 xcuserdata
 *.xccheckout
 profile
@@ -13,6 +14,11 @@ profile
 DerivedData
 *.hmap
 *.ipa
+
+# SPM
+/.build
+/Packages
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 
 # Bundler
 .bundle
